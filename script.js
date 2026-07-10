@@ -100,6 +100,10 @@ function updateScrollProgress() {
   document.documentElement.style.setProperty("--scroll", value.toFixed(4));
 }
 
+function glideTo(targetId) {
+  document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 $$("[data-spotlight]").forEach((button) => {
   button.addEventListener("click", () => {
     const item = spotlight[button.dataset.spotlight];
@@ -160,8 +164,34 @@ $$(".flip-card").forEach((card) => {
 
 $$("[data-jump]").forEach((button) => {
   button.addEventListener("click", () => {
-    document.getElementById(button.dataset.jump)?.scrollIntoView({ behavior: "smooth" });
+    glideTo(button.dataset.jump);
   });
+});
+
+
+function closeMenus(except) {
+  $$(".nav-group").forEach((group) => {
+    if (group === except) return;
+    group.classList.remove("is-open");
+    group.querySelector(".nav-trigger")?.setAttribute("aria-expanded", "false");
+  });
+}
+
+$$(".nav-trigger").forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    const group = trigger.closest(".nav-group");
+    const isOpen = group.classList.toggle("is-open");
+    trigger.setAttribute("aria-expanded", String(isOpen));
+    closeMenus(isOpen ? group : undefined);
+  });
+});
+
+$$(".nav-menu a").forEach((link) => link.addEventListener("click", () => closeMenus()));
+document.addEventListener("click", (event) => {
+  if (!event.target.closest(".mega-nav")) closeMenus();
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeMenus();
 });
 
 $("#shareButton")?.addEventListener("click", async () => {
@@ -183,6 +213,8 @@ $("#shareButton")?.addEventListener("click", async () => {
     showToast("分享没成功，可以直接复制浏览器地址。");
   }
 });
+
+$("[data-share-menu]")?.addEventListener("click", () => $("#shareButton")?.click());
 
 window.addEventListener("scroll", updateScrollProgress, { passive: true });
 updateScrollProgress();

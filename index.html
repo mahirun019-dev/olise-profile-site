@@ -18,10 +18,28 @@
         <span>17</span>
         <strong>OLISE</strong>
       </a>
-      <nav aria-label="页面导航">
-        <a href="#playground">互动</a>
-        <a href="#route">路线</a>
-        <a href="#cards">安利</a>
+      <nav class="mega-nav" aria-label="页面导航">
+        <div class="nav-group">
+          <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-play">互动</button>
+          <div class="nav-menu" id="menu-play">
+            <a href="#playground">互动球场</a>
+            <a href="#modes">三种视角</a>
+          </div>
+        </div>
+        <div class="nav-group">
+          <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-route">路线</button>
+          <div class="nav-menu" id="menu-route">
+            <a href="#route">职业生涯</a>
+            <a href="#route">法国国家队</a>
+          </div>
+        </div>
+        <div class="nav-group">
+          <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-cards">安利</button>
+          <div class="nav-menu" id="menu-cards">
+            <a href="#cards">朋友安利卡</a>
+            <button class="nav-share" type="button" data-share-menu>分享页面</button>
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -128,7 +146,7 @@
         </div>
       </section>
 
-      <section class="section mode-lab">
+      <section class="section mode-lab" id="modes">
         <div class="section-title">
           <p class="kicker">Style Switch</p>
           <h2>切换视角：你想怎么认识他？</h2>
