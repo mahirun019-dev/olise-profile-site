@@ -3,212 +3,220 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Michael Olise | 法国与拜仁的左脚魔术师</title>
+    <title>Michael Olise 互动档案 | 法国与拜仁的左脚创造者</title>
     <meta
       name="description"
-      content="一页式球员介绍网站：认识法国国脚、拜仁慕尼黑17号迈克尔·奥利塞。"
+      content="一个更适合手机分享的 Michael Olise 互动球员档案：点开球场、切换踢法、翻看成长路线。"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header class="site-header" aria-label="页面导航">
-      <a class="brand" href="#top" aria-label="回到顶部">
-        <span class="brand-mark">17</span>
-        <span>Olise</span>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="mark" href="#top" aria-label="回到顶部">
+        <span>17</span>
+        <strong>OLISE</strong>
       </a>
-      <nav class="nav-links" aria-label="主要内容">
-        <a href="#profile">速览</a>
-        <a href="#story">路线</a>
-        <a href="#style">特点</a>
-        <a href="#sources">来源</a>
+      <nav aria-label="页面导航">
+        <a href="#playground">互动</a>
+        <a href="#route">路线</a>
+        <a href="#cards">安利</a>
       </nav>
     </header>
 
     <main id="top">
-      <section class="hero" aria-label="Michael Olise 介绍封面">
-        <img
-          class="hero-image"
-          src="./assets/olise-hero.png"
-          alt="红蓝灯光下，一名红衣足球运动员从球员通道走向球场。"
-        />
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <p class="eyebrow">France / FC Bayern München</p>
+      <section class="hero">
+        <div class="hero-media" aria-hidden="true">
+          <img class="hero-frame hero-frame-main" src="./assets/olise-real-1.png" alt="" />
+          <img class="hero-frame hero-frame-side" src="./assets/olise-real-2.png" alt="" />
+        </div>
+        <div class="hero-shade"></div>
+        <div class="hero-copy">
+          <p class="kicker">France / Bayern / No.17</p>
           <h1>Michael Olise</h1>
-          <p class="lead">
-            安静、冷静、左脚极具创造力。奥利塞是那种不需要太多表情，
-            也能用一次停球、一次内切、一次传球让比赛突然亮起来的球员。
+          <p>
+            用手指探索他的比赛：右路起速、左脚内切、肋部传球。奥利塞的好看不在吵闹，
+            而在他把比赛节奏突然拧开的那一下。
           </p>
-          <div class="hero-actions">
-            <a class="primary-action" href="#profile">认识他</a>
-            <button class="ghost-action" id="shareButton" type="button">分享页面</button>
+          <div class="hero-controls" aria-label="快速互动">
+            <button class="pulse-button" type="button" data-jump="playground">进入互动球场</button>
+            <button class="quiet-button" id="shareButton" type="button">分享给朋友</button>
           </div>
         </div>
+        <div class="hero-dock" aria-label="球员速览">
+          <button type="button" data-spotlight="club">
+            <span>俱乐部</span>
+            <strong>拜仁慕尼黑</strong>
+          </button>
+          <button type="button" data-spotlight="role">
+            <span>角色</span>
+            <strong>右边锋 / 攻击手</strong>
+          </button>
+          <button type="button" data-spotlight="foot">
+            <span>武器</span>
+            <strong>左脚创造力</strong>
+          </button>
+        </div>
       </section>
 
-      <section class="quick-strip" id="profile" aria-label="球员速览">
-        <article>
-          <span>俱乐部</span>
-          <strong>拜仁慕尼黑</strong>
-        </article>
-        <article>
-          <span>号码</span>
-          <strong>17</strong>
-        </article>
-        <article>
-          <span>位置</span>
-          <strong>右边锋 / 前场攻击手</strong>
-        </article>
-        <article>
-          <span>惯用脚</span>
-          <strong>左脚</strong>
-        </article>
-      </section>
-
-      <section class="section two-column">
+      <section class="spotlight" aria-live="polite">
         <div>
-          <p class="section-kicker">球员档案</p>
-          <h2>法国国脚，拜仁的创造力开关</h2>
+          <p class="kicker">当前焦点</p>
+          <h2 id="spotlightTitle">拜仁慕尼黑的 17 号</h2>
         </div>
-        <div class="profile-grid">
-          <article class="fact-card">
-            <span>全名</span>
-            <strong>Michael Akpovie Olise</strong>
-          </article>
-          <article class="fact-card">
-            <span>生日</span>
-            <strong>2001年12月12日</strong>
-          </article>
-          <article class="fact-card">
-            <span>出生地</span>
-            <strong>英国伦敦</strong>
-          </article>
-          <article class="fact-card">
-            <span>身高 / 体重</span>
-            <strong>1.80米 / 78公斤</strong>
-          </article>
-          <article class="fact-card">
-            <span>加盟拜仁</span>
-            <strong>2024年7月7日</strong>
-          </article>
-          <article class="fact-card">
-            <span>合同</span>
-            <strong>至2029年6月30日</strong>
-          </article>
-        </div>
-      </section>
-
-      <section class="section story-section" id="story">
-        <div class="section-heading">
-          <p class="section-kicker">成长路线</p>
-          <h2>从伦敦青训到安联球场</h2>
-        </div>
-        <div class="timeline">
-          <article>
-            <span class="timeline-year">青训时期</span>
-            <h3>在英格兰体系里打磨技术</h3>
-            <p>
-              他先后经历阿森纳、切尔西、曼城和雷丁的青训体系，
-              很早就展现出细腻触球和前场想象力。
-            </p>
-          </article>
-          <article>
-            <span class="timeline-year">2019-2021</span>
-            <h3>雷丁一线队起步</h3>
-            <p>
-              在英冠完成职业生涯起步，用稳定的表现证明自己不只是天赋型球员，
-              也能承担真正比赛强度。
-            </p>
-          </article>
-          <article>
-            <span class="timeline-year">2021-2024</span>
-            <h3>水晶宫让他进入主流视野</h3>
-            <p>
-              在英超逐渐成为关键攻击点，右路持球、定位球和最后一传都很有辨识度。
-            </p>
-          </article>
-          <article>
-            <span class="timeline-year">2024 至今</span>
-            <h3>加盟拜仁，披上17号</h3>
-            <p>
-              拜仁官方资料显示，他自2024年7月成为球队一员，
-              并随队拿到德甲冠军等荣誉。
-            </p>
-          </article>
-          <article>
-            <span class="timeline-year">法国队</span>
-            <h3>从奥运银牌到成年国家队</h3>
-            <p>
-              他代表法国参加青年级别赛事，并入选2024年巴黎奥运会法国队，
-              之后在2024年9月完成法国成年国家队首秀。
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section style-lab" id="style">
-        <div class="section-heading">
-          <p class="section-kicker">踢法气质</p>
-          <h2>为什么朋友们会喜欢看他踢球</h2>
-        </div>
-        <div class="style-grid">
-          <article>
-            <span class="icon-pill">L</span>
-            <h3>左脚质量很高</h3>
-            <p>
-              内切、传中、直塞和射门都能从左脚发起。防守球员知道他想用左脚，
-              但还是很难完全封住线路。
-            </p>
-          </article>
-          <article>
-            <span class="icon-pill">10</span>
-            <h3>不只是边锋</h3>
-            <p>
-              他可以贴边拉开宽度，也能来到肋部当组织点。最迷人的地方是，
-              他经常在看似慢下来的瞬间突然加速。
-            </p>
-          </article>
-          <article>
-            <span class="icon-pill">◎</span>
-            <h3>冷静感很强</h3>
-            <p>
-              他的比赛气质偏安静，不太依赖夸张动作制造存在感。
-              这种克制反而让关键处理显得更高级。
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section honours">
-        <div>
-          <p class="section-kicker">已记录荣誉</p>
-          <h2>已经开始写入履历</h2>
-        </div>
-        <ul class="honour-list">
-          <li><span>拜仁慕尼黑</span><strong>德甲冠军 2025、2026</strong></li>
-          <li><span>拜仁慕尼黑</span><strong>弗朗茨·贝肯鲍尔超级杯 2025</strong></li>
-          <li><span>法国</span><strong>2024年巴黎奥运会银牌</strong></li>
-          <li><span>法国</span><strong>欧国联第三名 2025</strong></li>
-        </ul>
-      </section>
-
-      <section class="closing-banner" aria-label="分享语">
-        <p>一句话安利</p>
-        <h2>如果你喜欢技术型左脚、冷静前场和拜仁的红色速度，奥利塞很值得关注。</h2>
-      </section>
-
-      <section class="section sources" id="sources">
-        <div>
-          <p class="section-kicker">资料来源</p>
-          <h2>信息来自官方资料整理</h2>
-        </div>
-        <p>
-          球员基础资料、拜仁合同信息、位置、前俱乐部和荣誉主要参考
-          <a href="https://fcbayern.com/en/teams/first-team/michael-olise" target="_blank" rel="noreferrer">
-            拜仁慕尼黑官方球员页
-          </a>
-          。页面为非官方粉丝分享页，主视觉为原创生成图片，不包含真实俱乐部徽章或赞助商标识。
+        <p id="spotlightText">
+          2024 年夏天从水晶宫加盟拜仁，合同至 2029 年。这个页面不追求堆资料，
+          而是让你快速感受他为什么让人想继续看下去。
         </p>
+      </section>
+
+      <section class="section playground" id="playground">
+        <div class="section-title">
+          <p class="kicker">Interactive Pitch</p>
+          <h2>点一下球场，看看他怎么影响比赛</h2>
+        </div>
+
+        <div class="playground-grid">
+          <div class="pitch-card">
+            <svg class="pitch" viewBox="0 0 720 470" role="img" aria-label="奥利塞互动球场">
+              <rect class="pitch-bg" x="18" y="18" width="684" height="434" rx="22" />
+              <line x1="360" y1="18" x2="360" y2="452" />
+              <circle cx="360" cy="235" r="58" />
+              <rect x="18" y="118" width="112" height="234" rx="8" />
+              <rect x="590" y="118" width="112" height="234" rx="8" />
+              <path class="route route-a is-active" d="M610 345 C545 330, 530 268, 470 252 C420 238, 398 214, 344 190" />
+              <path class="route route-b" d="M602 330 C548 248, 500 190, 430 160 C390 142, 360 120, 318 90" />
+              <path class="route route-c" d="M610 336 C572 320, 536 306, 506 278 C470 244, 438 224, 400 226" />
+              <rect class="pitch-point is-active" data-zone="right" x="582" y="326" width="52" height="52" role="button" tabindex="0">
+                <title>右路接球</title>
+              </rect>
+              <rect class="pitch-point" data-zone="inside" x="462" y="232" width="52" height="52" role="button" tabindex="0">
+                <title>内切肋部</title>
+              </rect>
+              <rect class="pitch-point" data-zone="final" x="318" y="164" width="52" height="52" role="button" tabindex="0">
+                <title>最后一传</title>
+              </rect>
+            </svg>
+            <div class="pitch-legend">
+              <span>触点</span>
+              <strong id="zoneLabel">右路接球</strong>
+            </div>
+          </div>
+
+          <article class="zone-panel">
+            <p class="mini-label">比赛片段</p>
+            <h3 id="zoneTitle">先把防线拉宽</h3>
+            <p id="zoneText">
+              奥利塞常从右路拿球，让边后卫必须贴近他。只要对手重心一歪，他就有空间用左脚选择传中、内切或斜塞。
+            </p>
+            <div class="meter-list" aria-label="特点评分">
+              <label>
+                <span>节奏变化</span>
+                <meter id="meterTempo" min="0" max="100" value="86"></meter>
+              </label>
+              <label>
+                <span>传球威胁</span>
+                <meter id="meterPass" min="0" max="100" value="78"></meter>
+              </label>
+              <label>
+                <span>射门角度</span>
+                <meter id="meterShot" min="0" max="100" value="70"></meter>
+              </label>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section mode-lab">
+        <div class="section-title">
+          <p class="kicker">Style Switch</p>
+          <h2>切换视角：你想怎么认识他？</h2>
+        </div>
+        <div class="mode-tabs" role="tablist" aria-label="奥利塞介绍视角">
+          <button class="is-active" type="button" role="tab" aria-selected="true" data-mode="friend">朋友安利版</button>
+          <button type="button" role="tab" aria-selected="false" data-mode="tactic">战术观察版</button>
+          <button type="button" role="tab" aria-selected="false" data-mode="vibe">气质版</button>
+        </div>
+        <article class="mode-card">
+          <div>
+            <span id="modeTag">给朋友一句话</span>
+            <h3 id="modeTitle">他是那种越看越上头的左脚球员</h3>
+          </div>
+          <p id="modeText">
+            不一定每次都用夸张动作吸引镜头，但他拿球时会让你期待下一秒：会不会突然内切？会不会送出一脚很轻但很狠的传球？
+          </p>
+        </article>
+      </section>
+
+      <section class="section route" id="route">
+        <div class="section-title">
+          <p class="kicker">Career Route</p>
+          <h2>从伦敦到慕尼黑，再到法国队</h2>
+        </div>
+        <div class="timeline" aria-label="成长路线">
+          <button type="button" class="is-active" data-era="reading">
+            <span>2019</span>
+            <strong>雷丁起步</strong>
+          </button>
+          <button type="button" data-era="palace">
+            <span>2021</span>
+            <strong>水晶宫爆发</strong>
+          </button>
+          <button type="button" data-era="bayern">
+            <span>2024</span>
+            <strong>加盟拜仁</strong>
+          </button>
+          <button type="button" data-era="france">
+            <span>法国队</span>
+            <strong>成年国家队</strong>
+          </button>
+        </div>
+        <article class="era-card">
+          <p class="mini-label" id="eraYear">2019-2021</p>
+          <h3 id="eraTitle">在雷丁进入职业足球</h3>
+          <p id="eraText">
+            青训履历很丰富，但真正让他进入成年比赛节奏的是雷丁。他在那里把天赋变成了稳定上场的能力。
+          </p>
+        </article>
+      </section>
+
+      <section class="section cards" id="cards">
+        <div class="section-title">
+          <p class="kicker">Tap Cards</p>
+          <h2>点卡片，拿去安利朋友</h2>
+        </div>
+        <div class="card-grid">
+          <button class="flip-card" type="button">
+            <span>01</span>
+            <strong>为什么是左脚魔术师？</strong>
+            <em>点我翻开</em>
+            <p>因为他的左脚既能制造传球角度，也能突然把球送进危险区域。</p>
+          </button>
+          <button class="flip-card" type="button">
+            <span>02</span>
+            <strong>他最适合看什么？</strong>
+            <em>点我翻开</em>
+            <p>看他接球前的肩膀和第一步。真正的变化，通常在触球前就开始了。</p>
+          </button>
+          <button class="flip-card" type="button">
+            <span>03</span>
+            <strong>一句话推荐</strong>
+            <em>点我翻开</em>
+            <p>喜欢拜仁速度、法国前场和技术型边锋的人，很容易被他吸住。</p>
+          </button>
+        </div>
+      </section>
+
+      <section class="section sources">
+        <p class="kicker">Sources</p>
+        <p>
+          基础资料参考拜仁慕尼黑官方球员页与公开球员资料整理。本站是非官方粉丝分享页；
+          视觉图为原创生成图片，不包含真实徽章、赞助商或肖像复刻。
+        </p>
+        <a href="https://fcbayern.com/en/teams/first-team/michael-olise" target="_blank" rel="noreferrer">
+          查看拜仁官方球员页
+        </a>
       </section>
     </main>
 
