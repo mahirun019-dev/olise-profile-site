@@ -1,15 +1,15 @@
 :root {
-  color-scheme: dark;
-  --bg: #111a27;
-  --panel: rgba(21, 31, 46, 0.82);
-  --panel-strong: #172233;
-  --line: rgba(255, 255, 255, 0.14);
-  --text: #f7fbff;
-  --muted: rgba(235, 242, 255, 0.82);
-  --red: #ef2d45;
-  --blue: #2f7df4;
-  --mint: #39d7a3;
-  --gold: #ffd36d;
+  color-scheme: light;
+  --bg: #eef4f8;
+  --panel: #ffffff;
+  --panel-strong: #e5edf5;
+  --line: #cbd7e3;
+  --text: #142033;
+  --muted: #44566d;
+  --red: #c72c45;
+  --blue: #1267c9;
+  --mint: #08745b;
+  --gold: #815d09;
 }
 
 * {
@@ -23,7 +23,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: #111a27;
+  background: var(--bg);
   color: var(--text);
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -60,8 +60,8 @@ button {
   align-items: center;
   justify-content: space-between;
   padding: 14px clamp(16px, 4vw, 56px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(17, 26, 39, 0.92);
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(14px);
 }
 
@@ -73,7 +73,7 @@ button {
 
 .mark {
   gap: 10px;
-  color: white;
+  color: var(--text);
   text-decoration: none;
 }
 
@@ -82,7 +82,7 @@ button {
   width: 40px;
   height: 40px;
   place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.32);
+  border: 1px solid #9cabbc;
   border-radius: 6px;
   background: transparent;
   font-weight: 900;
@@ -116,9 +116,8 @@ button {
 .topbar nav a,
 .nav-share {
   border: 0;
-  color: rgba(255, 255, 255, 0.82);
+  color: #2a3e55;
   background: transparent;
-  color: rgba(255, 255, 255, 0.82);
   font-size: 0.94rem;
   font-weight: 800;
   text-decoration: none;
@@ -132,7 +131,7 @@ button {
 .topbar nav a:focus-visible,
 .nav-share:hover,
 .nav-share:focus-visible {
-  color: white;
+  color: var(--blue);
 }
 
 .nav-menu {
@@ -143,10 +142,10 @@ button {
   min-width: 178px;
   gap: 3px;
   padding: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--line);
   border-radius: 6px;
-  background: #1a2637;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
+  background: #ffffff;
+  box-shadow: 0 14px 30px rgba(33, 52, 77, 0.14);
   opacity: 0;
   transform: translateY(-10px);
   pointer-events: none;
@@ -167,7 +166,7 @@ button {
 .nav-menu a:focus-visible,
 .nav-share:hover,
 .nav-share:focus-visible {
-  background: rgba(255, 255, 255, 0.09);
+  background: #eaf2fb;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -769,6 +768,104 @@ meter::-webkit-meter-optimum-value {
 .toast.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Keep the image-led hero dark, then switch the reading areas to high-contrast light surfaces. */
+.hero {
+  color: white;
+}
+
+.hero-copy p {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.quiet-button {
+  border-color: rgba(255, 255, 255, 0.7);
+  color: white;
+}
+
+.hero-dock button {
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.hero-dock span {
+  color: var(--muted);
+}
+
+.hero-dock button:hover,
+.hero-dock button:focus-visible {
+  background: #f1f7ff;
+}
+
+.pitch-card,
+.zone-panel,
+.mode-card,
+.era-card,
+.trait-grid article,
+.international-grid article {
+  background: var(--panel);
+}
+
+.pitch-bg {
+  fill: #d8eee2;
+  stroke: #4c6c62;
+}
+
+.pitch line,
+.pitch circle,
+.pitch rect:not(.pitch-bg) {
+  stroke: #6f859a;
+}
+
+.route {
+  stroke: #61778c;
+}
+
+.pitch-point {
+  fill: rgba(255, 255, 255, 0.82);
+  stroke: #28587e;
+}
+
+.pitch-point.is-active {
+  fill: var(--red);
+  stroke: #ffffff;
+}
+
+.pitch-legend {
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.meter-list span,
+.profile-grid dd,
+.trait-grid h3,
+.international-grid h3 {
+  color: var(--text);
+}
+
+meter::-webkit-meter-bar {
+  background: #d9e3ed;
+}
+
+.mode-tabs button,
+.timeline button {
+  color: var(--text);
+  background: #ffffff;
+}
+
+.mode-tabs button.is-active,
+.timeline button.is-active {
+  background: #eaf2fb;
+}
+
+.flip-card {
+  color: var(--text);
+  background: #ffffff;
+}
+
+.flip-card p {
+  color: var(--text);
 }
 
 @media (max-width: 860px) {
